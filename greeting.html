@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+		
+		body{
+			background-color: black;
+			text-align: center;
+			line-height: 550px;
+           
+            }
+
+	</style>
+</head>
+<body>
+	
+<script type="text/javascript">
+	let newElement=document.createElement("hi");
+	let get_Element=document.body;
+	let date=new Date();
+	let current_Hour=date.getHours();
+	let message;
+	if(current_Hour>=4&&current_Hour<12)
+	{
+		message="Hi! Good Morning ";
+	}
+	else if(current_Hour>=12&&current_Hour<17)
+	{
+		message="Hi! Good Noon ";
+	}
+	else if(current_Hour>=17&&current_Hour<20)
+	{
+		message="Hi! Good Evening ";
+	}
+	else if(current_Hour>=20||((current_Hour>=0)&&(current_Hour<4)))
+	{
+		message="Hi! Good night ";
+	}
+
+let text_node=document.createTextNode(message);
+newElement.appendChild(text_node);
+get_Element.appendChild(newElement);
+get_Element.style.cssText="background-color:black;font-size:100px;border:30px dashed  white;color:white;text-align:center";
+
+</script>
+</body>
+</html>
+
